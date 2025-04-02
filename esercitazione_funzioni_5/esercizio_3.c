@@ -34,11 +34,11 @@ void solve_equation(double a, double b, double c){
 }
 int main (void){
     double a, b, c;
-    printf ("inserire il primo coefficiente dell'quazione: \n");
+    printf ("inserire il primo coefficiente dell'equazione: \n");
     scanf ("%lf", &a);
-    printf ("inserire il secondo coefficiente dell'quazione: \n");
+    printf ("inserire il secondo coefficiente dell'equazione: \n");
     scanf ("%lf", &b);
-    printf ("inserire il terzo coefficiente dell'quazione: \n");
+    printf ("inserire il terzo coefficiente dell'equazione: \n");
     scanf ("%lf", &c);
     solve_equation(a,b,c);
     return 0;
