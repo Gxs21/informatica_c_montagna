@@ -34,8 +34,10 @@ void solve_equation(double a, double b, double c){
 }
 int main (void){
     double a, b, c;
-    printf ("inserire il primo coefficiente dell'equazione: \n");
-    scanf ("%lf", &a);
+    do{
+        printf ("inserire il primo coefficiente dell'equazione: \n");
+        scanf ("%lf", &a);
+    }while(a==0);
     printf ("inserire il secondo coefficiente dell'equazione: \n");
     scanf ("%lf", &b);
     printf ("inserire il terzo coefficiente dell'equazione: \n");
