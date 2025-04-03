@@ -10,8 +10,8 @@ int conti (){
     double claudia=100;
     int year=0;
     do{
-        augustus+= (augustus*1.05);
-        claudia+=(claudia*1.04);
+        augustus= (augustus*1.05);
+        claudia=(claudia*1.04);
         year++;
     }while(augustus<=claudia);
     return year;
