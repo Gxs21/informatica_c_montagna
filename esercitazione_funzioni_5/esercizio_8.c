@@ -21,7 +21,7 @@ Segue scheletro del programma che è possibile modificare.*/
 // restituisce la differenza in minuti tra due orari in minuti
 int time_diff(int h1, int m1, int h2, int m2) { 
     int differenza=0;
-    if(h2<=h1 && m2<m1){
+    if((h2<h1) || (h2==h1 && m2<m1)){
         differenza=(((h2*60)+m2+60*24)-((h1*60)+m1));
     }else{
          differenza=(((h2*60)+m2)-((h1*60)+m1)); 
