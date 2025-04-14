@@ -13,7 +13,7 @@ void prompt_array(int array[], int size){
     for (int i=0; i<size; i++){
         printf("inserire un numero intero\n");
         scanf("%d", &array[i]);
-        printf("%d \n", array[i]);
+        
     }
     for(int i=0; i<size; i++){
         printf("\n %d ", array[i]);
@@ -24,12 +24,15 @@ int main(){
     printf("inserire quanti interi si vogliono inserire:\n");
     scanf("%d", &size);
     int array[size];
+
     prompt_array(array, size);
+    // l'array che si chiama come il parametro della funzione risulta modificato come nella funzione dal punto di chiamata in poi, quindi ripiendolo nella funzione viene modificato globalmente
     for(int i=0; i<size; i++){
         printf("\n %d ", array[i]);
     
     }
     return 0;
 }
-//chiedigli come funziona il paddaggio del parametro da riempire per non avere un ritorno di tipo array
+//chiedigli come funziona il paddaggio del parametro da riempire per non avere un ritorno 
+// di tipo array
 //chiedi perchè non puoi usare la sintassi che hai usato 
