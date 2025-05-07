@@ -37,9 +37,9 @@ void ohm(double r10[], double r15[], double r22[], double r33[], double r47[], d
 void print_array(double r10[], double r15[], double r22[], double r33[], double r47[], double r68[], int size){
     for (int i=0; i<size; i++){
         if(r10[i]!=0){
-            printf("%.2lf \n", r10[i]);
+            printf("r10[%d]=%.2lf \n",i, r10[i]);
         }else if(r15[i]!=0){
-            printf("%.2lf \n", r15[i]);
+            printf("r15[%d]=%.2lf \n",i, r15[i]);
         }else if(r22[i]!=0){
             printf("%.2lf \n", r22[i]);
         }else if(r33[i]!=0){
