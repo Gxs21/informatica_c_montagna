@@ -17,27 +17,33 @@ Si assuma anche che indexes, e results siano stati allocati dal chiamante ad una
 
 Si suggerisce realizzare una funzione di appoggio per il computo del numero di occorrenze 
 di un elemento in un array.*/
-
-int has_k_occurrences(int array[], int size, int k, int indexes[], int results[]){
-    int t=0;
-    int s=0;
-    for (int i=0; i <size; i++){
-        int count=0;
-        int actual=array[i];
-        for (int j=0; j<size;j++){
-            if(array[j]==actual){
-                count++;
-                indexes[s]=j;
-                s++;
-                if (count==k){
-                    results[t]=actual;
-                    t++;
-                    return 1;
-                }else{
-                    return 0;
-                }
-            }
+#include<stdio.h>
+int occorrenze (int array[],int n, int size, int indexes[]){
+    int occorrence=0;
+    for (int j=0; j<size; j++){
+        if (array[j]==n){
+            indexes[occorrence]=j;
+            occorrence++;
         }
     }
-    
+    return occorrence;
+}
+int has_k_occurrences(int array[], int size, int k, int indexes[], int results[]){
+   for (int i=0; i<size; i++){
+        if (occorrenze(array, array[i], size, indexes)==k && array[i]!=results[0]){
+            results[0]=array[i];            
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int main(){
+    int array[]={0,1,2,3,4,2};
+    int k=3;
+    int size=6;
+    int indexes[6];
+    int results[1];
+    printf("%d", has_k_occurrences(array, size, k, indexes, results ));
+    return 0;
 }
