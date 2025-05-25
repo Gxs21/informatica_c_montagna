@@ -34,7 +34,7 @@ int main(){
     printf("inserire una stringa di caratteri di meno di 100 caratteri: ");
     scanf("%s", string);
     printf("inserire il carattere da cercare:");
-    scanf(" %c", &character);
+    scanf(" %c", &character);//è importante mettere il carattere di spazio nella scanf perchè inserendo una stringa da tastiera rimane il carattrere di spazio nel buffer
     printf("%d", string_occurreces(string, character));
     return 0;
 }
